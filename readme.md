@@ -1,10 +1,10 @@
 # NSFileWrapper Modification Date Bug
 
 ## Overview
-This repository demonstrates a bug in `NSFileWrapper` where overwriting a file with the same content using `-[NSFileWrapper writeToURL:options:originalContentsURL:error:]` causes the file's modification date to sometimes be set in the past instead of updating to the current time.
+This repository demonstrates a bug in `NSFileWrapper` where overwriting a file with the same content using `-[NSFileWrapper writeToURL:options:originalContentsURL:error:]` sometimes causes the file's modification date to be set in the past instead of updating to the current time.
 
 ## Reproduction Steps
-1. Clone this repository:
+1. Clone this repository
 2. Open the Xcode project and run the `testWriteFile` test.
 3. The test should fail ~50% of the times (the test runs 10 times)
 
