@@ -9,10 +9,10 @@ This repository demonstrates a bug in `NSFileWrapper` where overwriting a file w
 3. The test should fail ~50% of the times (the test runs 10 times)
 
 ## Expected Behavior
-When a file is overwritten, its modification date should be updated or kept the same.
+When a file is overwritten, its modification date should either update to the current time or remain unchanged.
 
 ## Actual Behavior
-The modification date is sometimes set to a past timestamp rather than the actual write time.
+In some cases, the modification date is unexpectedly set to an earlier timestamp rather than reflecting the actual write time.
 
 ## System Information
 This issue has been observed on:
